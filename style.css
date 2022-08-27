@@ -1,0 +1,298 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+body{
+    background: rgb(27, 27, 27);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#kmr_lp{
+    height: 830vh;
+    width: 100%;
+    background-image: repeating-radial-gradient(circle at center center, rgb(27, 27, 27) 0px, rgb(27, 27, 27) 36px,rgb(84, 84, 84) 36px, rgb(84, 84, 84) 64px,rgb(141, 141, 141) 64px, rgb(141, 141, 141) 87px); background-size: 54px 54px;;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    overflow: hidden;
+}
+
+#lp_pt1{
+    height: 100vh;
+    width: 50%;
+    background-image: repeating-radial-gradient(circle at center center, rgb(120, 99, 211) 0px, rgb(120, 99, 211) 50px,rgb(150, 129, 218) 50px, rgb(150, 129, 218) 128px,rgb(181, 159, 226) 128px, rgb(181, 159, 226) 157px,rgb(211, 189, 233) 157px, rgb(211, 189, 233) 184px); background-size: 77px 77px;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#lp_head{
+    height: 100px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0%;
+    top: 40vh;
+    font-size: 80pt;
+    font-family: 'Rubik';
+    font-weight: 700;
+    line-height: 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #E8E8E8;
+    text-align: center;
+}
+
+
+#lp_txt {
+    height: 50vh;
+    width: 50%;
+    background: transparent;
+    position: absolute;
+    left: 0%;
+    top: 110vh;
+    border-radius: 0px;
+}
+
+#txt_head{
+    height: 60px;
+    width: 80%;
+    background: transparent;
+    position: absolute;
+    top: 7.5%;
+    left: 10%;
+    font-family: 'Rubik';
+    color: white;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-size: 25pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#txt_txt {
+    height: 260px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 22.5%;
+    left: 15%;
+    font-family: 'Rubik';
+    color: white;
+    font-size: 17.5pt;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+}
+
+a{
+    color: white;
+}
+
+
+
+ul {
+    list-style: none;
+}
+ul li::before {
+    content: "";
+    background-image: url(fb-heart.gif);
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 0.1rem;
+    margin-right: 0.2rem;
+    border-radius: 50%;
+}
+
+#wk_head{
+    height: 60px;
+    width: 80%;
+    background: transparent;
+    position: absolute;
+    top: 165vh;
+    left: 10%;
+    font-family: 'Rubik';
+    color: white;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-size: 25pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+#lp_pt3{
+    height: 80vh;
+    width: 90vw;
+    background-image: repeating-radial-gradient(circle at center center, rgb(120, 99, 211) 0px, rgb(120, 99, 211) 50px,rgb(150, 129, 218) 50px, rgb(150, 129, 218) 128px,rgb(181, 159, 226) 128px, rgb(181, 159, 226) 157px,rgb(211, 189, 233) 157px, rgb(211, 189, 233) 184px); background-size: 77px 77px;
+    position: absolute;
+    right: 0%;
+    top: 180vh;
+    border-radius: 10px;
+}
+
+#lp_pt4{
+    height: 80vh;
+    width: 90vw;
+    background-image: repeating-radial-gradient(circle at center center, rgb(120, 99, 211) 0px, rgb(120, 99, 211) 50px,rgb(150, 129, 218) 50px, rgb(150, 129, 218) 128px,rgb(181, 159, 226) 128px, rgb(181, 159, 226) 157px,rgb(211, 189, 233) 157px, rgb(211, 189, 233) 184px); background-size: 77px 77px;
+    position: absolute;
+    left: 0%;
+    top: 270vh;
+    border-radius: 10px;
+}
+
+#lp_pt5{
+    height: 80vh;
+    width: 90vw;
+    background-image: repeating-radial-gradient(circle at center center, rgb(120, 99, 211) 0px, rgb(120, 99, 211) 50px,rgb(150, 129, 218) 50px, rgb(150, 129, 218) 128px,rgb(181, 159, 226) 128px, rgb(181, 159, 226) 157px,rgb(211, 189, 233) 157px, rgb(211, 189, 233) 184px); background-size: 77px 77px;
+    position: absolute;
+    right: 0%;
+    top: 360vh;
+    border-radius: 10px;
+}
+
+
+#lp_pt6{
+    height: 80vh;
+    width: 90vw;
+    background-image: repeating-radial-gradient(circle at center center, rgb(120, 99, 211) 0px, rgb(120, 99, 211) 50px,rgb(150, 129, 218) 50px, rgb(150, 129, 218) 128px,rgb(181, 159, 226) 128px, rgb(181, 159, 226) 157px,rgb(211, 189, 233) 157px, rgb(211, 189, 233) 184px); background-size: 77px 77px;
+    position: absolute;
+    left: 0%;
+    top: 450vh;
+    border-radius: 10px;
+}
+
+
+#lp_pt7{
+    height: 80vh;
+    width: 90vw;
+    background-image: repeating-radial-gradient(circle at center center, rgb(120, 99, 211) 0px, rgb(120, 99, 211) 50px,rgb(150, 129, 218) 50px, rgb(150, 129, 218) 128px,rgb(181, 159, 226) 128px, rgb(181, 159, 226) 157px,rgb(211, 189, 233) 157px, rgb(211, 189, 233) 184px); background-size: 77px 77px;
+    position: absolute;
+    right: 0%;
+    top: 540vh;
+    border-radius: 10px;
+}
+
+#lp_ptf{
+    height: 30vh;
+    width: 90vw;
+    background-image: repeating-radial-gradient(circle at center center, rgb(120, 99, 211) 0px, rgb(120, 99, 211) 50px,rgb(150, 129, 218) 50px, rgb(150, 129, 218) 128px,rgb(181, 159, 226) 128px, rgb(181, 159, 226) 157px,rgb(211, 189, 233) 157px, rgb(211, 189, 233) 184px); background-size: 77px 77px;
+    position: absolute;
+    left: 5%;
+    bottom: 0%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#f_head {
+    height: 100px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0%;
+    top: 10px;
+    font-size: 40pt;
+    font-family: 'Rubik';
+    font-weight: 700;
+    line-height: 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #E8E8E8;
+    text-align: center;
+}
+
+#f_phn{
+    height: 50px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 150px;
+    left: 0%;
+    font-family: 'Rubik';
+    color: white;
+    font-size: 17.5pt;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+#f_eml{
+    height: 50px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 110px;
+    left: 0%;
+    font-family: 'Rubik';
+    color: white;
+    font-size: 17.5pt;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 50px;
+    text-align: center;
+}
+@media screen and (max-width: 650px) {
+  
+  #kmr_lp{
+    height: 560vh;
+  }
+  #lp_head{
+    font-size: 30pt;
+    font-weight: 700;
+  }
+  #txt_txt{
+    font-size: 11pt;
+    letter-spacing: 0px;
+  }
+  #lp_pt3, #lp_pt4, #lp_pt5, #lp_pt6, #lp_pt7{
+      height: 35vh;
+  }
+  #lp_pt4{
+      top: 220vh;
+  }
+  #lp_pt5{
+      top: 260vh;
+  }
+  #lp_pt6{
+      top: 300vh;
+  }
+  #lp_pt7{
+      top: 340vh;
+  }
+  #f_head{
+    font-size: 30pt;
+  }
+  #f_phn{
+    font-size: 15pt;
+  }
+  #f_eml{
+    font-size: 15pt;
+  }
+}
+
+
+
+
+
+
+
+
+
