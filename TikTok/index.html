@@ -6,15 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdultShorts</title>
   <link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="mediaelementplayer.min.css" />
 </head>
-<body onload="SetVideos();">
+<body>
   <section class="as_main">
     <div class="video_cnt" id="videocnt">
 
-      <video class="as_video" id="mv1" preload="auto" controls src="https://cdn2.onlytik.com/videos/VJ3l.mp4" type="video/mp4"></video>
-      <video class="as_video" id="mv2" preload="auto" controls src="https://cdn2.onlytik.com/videos/7MQb.mp4" type="video/mp4" ></video>
-      <video class="as_video" id="mv3" preload="auto" controls src="https://cdn2.onlytik.com/videos/J6dV.mp4" type="video/mp4" ></video>
+      <video class="as_video" id="mv1" preload="auto" controls>
+        <source src="https://cdn2.onlytik.com/videos/VJ3l.mp4" type='video/mp4'>
+      </video>
+      <video class="as_video" id="mv2" preload="auto" controls>
+        <source src="https://cdn2.onlytik.com/videos/7MQb.mp4" type='video/mp4'>
+      </video>
+      <video class="as_video" id="mv3" preload="auto" controls>
+        <source src="https://cdn2.onlytik.com/videos/J6dV.mp4" type='video/mp4'>
+      </video>
     
     </div>
   </section>
@@ -97,10 +103,13 @@ function setSRC(videoid) {
 }
 
 
+
   </script>
   <script
   src="https://code.jquery.com/jquery-3.6.1.min.js"
   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
   crossorigin="anonymous"></script>
+  <script src="mediaelement-and-player.min.js"></script>
+  
 </body>
 </html>
