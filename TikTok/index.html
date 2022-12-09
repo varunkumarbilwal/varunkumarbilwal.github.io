@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdultShorts</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body onload="SetVideos();">
+  <section class="as_main">
+    <div class="video_cnt" id="videocnt">
+
+      <video class="as_video" id="mv1" preload="auto" controls src="https://cdn2.onlytik.com/videos/VJ3l.mp4" type="video/mp4"></video>
+      <video class="as_video" id="mv2" preload="auto" controls src="https://cdn2.onlytik.com/videos/7MQb.mp4" type="video/mp4" ></video>
+      <video class="as_video" id="mv3" preload="auto" controls src="https://cdn2.onlytik.com/videos/J6dV.mp4" type="video/mp4" ></video>
+    
+    </div>
+  </section>
+  <script> 
+
+
+
+const videocnt = document.getElementById("videocnt");
+
+videocnt.addEventListener('scroll', function(e) {
+  var videoInsideDiv = videocnt.querySelectorAll("video");
+  document.querySelectorAll('video').forEach(vid => vid.pause());
+  var lastVideoNum = videoInsideDiv.length - 1;
+  var lastVideo = videoInsideDiv[lastVideoNum];
+  var lastVideoID = lastVideo.id;
+  var lastVideoOffset = $("#" + lastVideoID).offset();
+  var lastVideoOffsetTop = lastVideoOffset.top;
+  //console.log(lastVideoID + " --" + lastVideoOffsetTop);
+  var videoContDim = videocnt.getBoundingClientRect();
+  var videoContHeight = videoContDim.height;
+  if (lastVideoOffsetTop == videoContHeight) {
+    CreateVideo();
+  }
+  document.querySelectorAll('video').forEach(vid => PlayVideo(vid));
+});
+
+function PlayVideo(videoid) {
+  if ($("#" + videoid.id).offset().top == 0) {
+    document.getElementById(videoid.id).play();
+  }
+}
+
+function CreateVideo() {
+  var videoInsideDiv = videocnt.querySelectorAll("video");
+  var lastVideoNum = videoInsideDiv.length;
+  var lastVideoIDNum = lastVideoNum + 1;
+  var finalVideoID = "mv" + lastVideoIDNum;
+  var createdElement = document.createElement("video");
+  createdElement.setAttribute("class", "as_video");
+  createdElement.setAttribute("id", finalVideoID);
+  createdElement.setAttribute("preload", true);
+  createdElement.setAttribute("type", "video/mp4");
+  createdElement.loop = true;
+  createdElement.controls = true;
+  createdElement.muted = false;
+  var client = new XMLHttpRequest();
+  client.open('GET', '/videos.txt');
+  client.onreadystatechange = function(){
+    if( client.responseText != '' ){
+      var txt = client.responseText.split("\n");
+      var videosLength = txt.length;
+      var minLength = 1;
+      var randomnumber = Math.floor(Math.random() * (videosLength - minLength + 1)) + minLength;
+      createdElement.src = txt[randomnumber];
+    }
+  }
+  client.send();
+  createdElement.load();
+  console.log(createdElement.id);
+  videocnt.appendChild(createdElement);
+}
+
+function SetVideos() {
+  document.querySelectorAll('video').forEach(vid => setSRC(vid));
+}
+
+function setSRC(videoid) {
+  var client = new XMLHttpRequest();
+  client.open('GET', '/videos.txt');
+  client.onreadystatechange = function(){
+    if( client.responseText != '' ){
+      var txt = client.responseText.split("\n");
+      var videosLength = txt.length;
+      var minLength = 1;
+      var randomnumber = Math.floor(Math.random() * (videosLength - minLength + 1)) + minLength;
+      document.getElementById(videoid.id).src = txt[randomnumber];
+    }
+  }
+  client.send();
+}
+
+
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+</body>
+</html>
