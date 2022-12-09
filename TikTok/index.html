@@ -32,7 +32,7 @@ const videocnt = document.getElementById("videocnt");
 
 videocnt.addEventListener('scroll', function(e) {
   var videoInsideDiv = videocnt.querySelectorAll("video");
-  document.querySelectorAll('video').forEach(vid => vid.pause());
+  //document.querySelectorAll('video').forEach(vid => vid.pause());
   var lastVideoNum = videoInsideDiv.length - 1;
   var lastVideo = videoInsideDiv[lastVideoNum];
   var lastVideoID = lastVideo.id;
@@ -62,10 +62,10 @@ function CreateVideo() {
   createdElement.setAttribute("class", "as_video");
   createdElement.setAttribute("id", finalVideoID);
   createdElement.setAttribute("preload", true);
-  createdElement.setAttribute("type", "video/mp4");
   createdElement.loop = true;
   createdElement.controls = true;
   createdElement.muted = false;
+  var vidSource = document.createElement("source");
   var client = new XMLHttpRequest();
   client.open('GET', '/videos.txt');
   client.onreadystatechange = function(){
@@ -74,13 +74,17 @@ function CreateVideo() {
       var videosLength = txt.length;
       var minLength = 1;
       var randomnumber = Math.floor(Math.random() * (videosLength - minLength + 1)) + minLength;
-      createdElement.src = txt[randomnumber];
+      vidSource.src = txt[randomnumber];
     }
   }
   client.send();
-  createdElement.load();
   console.log(createdElement.id);
+  createdElement.appendChild(vidSource);
+  vidSource.type = "video.mp4";
   videocnt.appendChild(createdElement);
+  console.log(createdElement);
+  createdElement.load();
+  createdElement.play();
 }
 
 function SetVideos() {
