@@ -58,6 +58,8 @@ videocnt.addEventListener('scroll', function(e) {
   document.querySelectorAll('video').forEach(vid => vid.pause());
   document.getElementById("rp").style.display = "none";
   document.getElementById("asoptions").style.display = "none";
+  document.getElementById("adlike").style.color = "#fcfcff";
+  document.getElementById("addislike").style.color = "#fcfcff";
   var lastVideoNum = videoInsideDiv.length - 1;
   var lastVideo = videoInsideDiv[lastVideoNum];
   var lastVideoID = lastVideo.id;
