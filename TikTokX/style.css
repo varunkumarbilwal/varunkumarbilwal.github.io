@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #fcfcff;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.as_main {
+  height: 100%;
+  width: 376px;
+  background: #141417;
+  position: fixed;
+  left: calc(50% - 188px);
+  top: 0%;
+}
+
+.as_head {
+  height: 50px;
+  width: 200px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  z-index: 100;
+}
+
+.video_cnt {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  overflow: auto;
+  gap: 0em;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  object-fit: fill;
+  z-index: 10;
+}
+
+.video_cnt::-webkit-scrollbar {
+  display: none;
+}
+
+.video_box {
+  min-height: 100%;
+  width: 376px;
+  background: #141417;
+}
+
+.as_video {
+  min-height: 100%;
+  width: 100%;
+  background: #141417;
+  scroll-snap-align: start;
+}
+
+.video_paused {
+  height: 50px;
+  width: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM9 9h2v6H9V9zm4 0h2v6h-2V9z' fill='rgba(255,255,255,1)'/%3E%3C/svg%3E");
+  background-size: cover;
+  position: absolute;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
+  display: block;
+  z-index: 20;
+}
+
+.video_user_details {
+  height: 120px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  padding: 10px;
+  z-index: 20;
+}
+
+.video_user_details h4 {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.video_user_details p {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.as_options {
+  height: 160px;
+  width: 50px;
+  background: transparent;
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 80px);
+  z-index: 20;
+  display: block;
+}
+
+.as_logo {
+  height: 40px;
+  width: 40px;
+  background: #fcfcfc;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #141417;
+}
+
+.as_like, .as_dislike {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 2.3rem;
+  transition: 0.5s ease-in-out;
+}
+
+.as_dislike {
+  top: 110px;
+  font-size: 2.1rem;
+}
