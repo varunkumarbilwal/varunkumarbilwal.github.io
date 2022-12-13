@@ -1,0 +1,35 @@
+
+body {
+    background: #fcfcff;
+}
+
+.swiper {
+    height: 100%;
+    width: 376px;
+    background: #fcfcff;
+    position: absolute;
+    left: calc(50% - 188px);
+    top: 0%;
+}
+
+.main-wrapper {
+    height: 100%;
+    width: 100%;
+    background: #fcfcff;
+}
+
+.swiper-slide {
+    height: 100%;
+    width: 100%;
+    background: #141417;
+}
+
+.play-icon {
+    position: absolute;
+    left: calc(50% - 35px);
+    top: calc(50% - 35px);
+    fill: rgb(255, 255, 255);
+    z-index: 100;
+    opacity: 0.5;
+    display: none;
+}
